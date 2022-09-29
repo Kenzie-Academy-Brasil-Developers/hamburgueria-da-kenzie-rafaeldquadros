@@ -52,9 +52,13 @@ export const StyledHeader = styled.header`
         border: 2px solid var(--color-grey-20);
         color: var(--color-grey-50);
 
+        font-size: 16px;
+
         outline-color: var(--color-grey-100);
     }
     input::placeholder {
+        font-size: 16px;
+        color: var(--color-grey-20);
         padding: 20px;
     }
 

@@ -1,5 +1,8 @@
 import Products from "../Products";
 import { v4 as uuidv4 } from "uuid";
+import { StyledPesquisa } from "../../style/Pesquisa/pesquisa";
+import { StyledButton } from "../../style/Button/button";
+import { StyledList } from "../../style/ListCard/listCards";
 
 function Pesquisa({
     filteredProducts,
@@ -8,12 +11,25 @@ function Pesquisa({
     setFilteredProducts,
 }) {
     return (
-        <>
-            <h2>Resultados da pesquisa por:{currentPesquisa} </h2>
-            <button onClick={() => setFilteredProducts([])}>
-                Limpar pesquisa
-            </button>
-            <ul>
+        <div
+            style={{
+                display: "flex",
+                flexDirection: "column",
+                maxWidth: "100%",
+            }}
+        >
+            <StyledPesquisa>
+                <div className="container">
+                    <div>
+                        <h2>Resultados para:</h2>
+                        <p>{currentPesquisa}</p>
+                    </div>
+                    <StyledButton onClick={() => setFilteredProducts([])}>
+                        Limpar pesquisa
+                    </StyledButton>
+                </div>
+            </StyledPesquisa>
+            <StyledList>
                 {filteredProducts.map((product) => (
                     <Products
                         key={uuidv4()}
@@ -25,8 +41,8 @@ function Pesquisa({
                         callback={callback}
                     />
                 ))}
-            </ul>
-        </>
+            </StyledList>
+        </div>
     );
 }
 

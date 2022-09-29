@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const StyledCard = styled.li`
-    width: 300px;
+    min-width: 300px;
+    max-width: 300px;
     height: 346px;
 
     border: 2px solid var(--color-grey-20);

@@ -135,6 +135,7 @@ border-spacing: 0;
         --color-grey-100: #333333;
         --color-grey-50: #828282;
         --color-grey-20:#E0E0E0;
+        --color-grey-4: #BDBDBD;
         --color-grey-0: #f5f5f5;
 
         --color-negative: #E60000;

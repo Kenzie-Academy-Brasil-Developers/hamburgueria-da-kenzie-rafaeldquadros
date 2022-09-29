@@ -1,10 +1,12 @@
+import { StyledTotal } from "../../style/Total/total";
+
 function CartTotal({ currentSale, setCurrentSale }) {
     const totalCart = currentSale.reduce(
         (cur, acc) => cur + Number(acc.price),
         0
     );
     return (
-        <section>
+        <StyledTotal>
             <div>
                 <h2>Total</h2>
                 <p>
@@ -15,7 +17,7 @@ function CartTotal({ currentSale, setCurrentSale }) {
                 </p>
             </div>
             <button onClick={() => setCurrentSale([])}>Remover todos</button>
-        </section>
+        </StyledTotal>
     );
 }
 export default CartTotal;

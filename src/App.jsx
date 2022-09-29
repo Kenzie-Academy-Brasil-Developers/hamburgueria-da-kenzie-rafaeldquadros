@@ -5,6 +5,7 @@ import Pesquisa from "./components/Pesquisa";
 import Cart from "./components/Cart";
 
 import { useEffect, useState } from "react";
+import { StyledMain } from "./style/Main/main";
 
 function App() {
     const [products, setProducts] = useState([]);
@@ -32,17 +33,22 @@ function App() {
                 setFilteredProducts={setFilteredProducts}
                 setCurrentPesquisa={setCurrentPesquisa}
             />
-            {filteredProducts.length ? (
-                <Pesquisa
-                    filteredProducts={filteredProducts}
-                    callback={handdleClick}
-                    currentPesquisa={currentPesquisa}
-                    setFilteredProducts={setFilteredProducts}
+            <StyledMain>
+                {filteredProducts.length ? (
+                    <Pesquisa
+                        filteredProducts={filteredProducts}
+                        callback={handdleClick}
+                        currentPesquisa={currentPesquisa}
+                        setFilteredProducts={setFilteredProducts}
+                    />
+                ) : (
+                    <ProductsList products={products} callback={handdleClick} />
+                )}
+                <Cart
+                    currentSale={currentSale}
+                    setCurrentSale={setCurrentSale}
                 />
-            ) : (
-                <ProductsList products={products} callback={handdleClick} />
-            )}
-            <Cart currentSale={currentSale} setCurrentSale={setCurrentSale} />
+            </StyledMain>
         </div>
     );
 }

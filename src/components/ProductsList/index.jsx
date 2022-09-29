@@ -1,9 +1,11 @@
 import Products from "../Products";
 import { v4 as uuidv4 } from "uuid";
+import { StyledList } from "../../style/ListCard/listCards";
 
 function ProductsList({ products, callback }) {
+    console.log(products);
     return (
-        <ul>
+        <StyledList>
             {products.map((product) => {
                 return (
                     <Products
@@ -17,7 +19,7 @@ function ProductsList({ products, callback }) {
                     />
                 );
             })}
-        </ul>
+        </StyledList>
     );
 }
 export default ProductsList;
