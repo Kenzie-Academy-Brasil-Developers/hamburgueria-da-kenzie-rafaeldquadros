@@ -6,6 +6,8 @@ import Cart from "./components/Cart";
 
 import { useEffect, useState } from "react";
 import { StyledMain } from "./style/Main/main";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
     const [products, setProducts] = useState([]);
@@ -14,10 +16,15 @@ function App() {
     const [currentPesquisa, setCurrentPesquisa] = useState("");
 
     function handdleClick(id) {
-        products.find(
-            (product) =>
-                product.id === id && setCurrentSale([...currentSale, product])
+        const productCart = products.find((product) => product.id === id);
+        const productCartIncludes = currentSale.find(
+            (product) => product.id === id
         );
+        if (productCart && !productCartIncludes) {
+            setCurrentSale([...currentSale, productCart]);
+        } else {
+            toast.error("Este item já está no carrinho");
+        }
     }
 
     useEffect(() => {
@@ -49,6 +56,7 @@ function App() {
                     setCurrentSale={setCurrentSale}
                 />
             </StyledMain>
+            <ToastContainer />
         </div>
     );
 }
