@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const StyledCart = styled.section`
     width: 95%;
+    min-width: 280px;
     max-width: 365px;
     min-height: 200px;
 
