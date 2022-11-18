@@ -1,4 +1,4 @@
-# Projeto Final do modulo 2 da Kenzie Academy Brasil
+# Meu primeiro projeto em React
 
 <br></br>
 
