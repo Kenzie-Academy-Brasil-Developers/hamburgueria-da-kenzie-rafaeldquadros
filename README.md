@@ -2,7 +2,7 @@
 
 <br></br>
 
-### Este é um projeto desenvolvido em React, simula um e-commerce de uma hamburgueria e suas funcionalidades, o projeto utiliza uma das apis publicas que a Kenzie Academy Brasil disponibiliza para praticarmo. Foi um projeto bem interessante de desenvolver e foi o meu primeiro utilizando o React.
+### Este é um projeto desenvolvido em React, simula um e-commerce de uma hamburgueria e suas funcionalidades, o projeto utiliza uma das apis publicas que a Kenzie Academy Brasil disponibiliza para praticarmos. Foi um projeto bem interessante de desenvolver e foi o meu primeiro utilizando o React.
 
 <br></br>
 
